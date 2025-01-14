@@ -66,21 +66,6 @@ Aplikasi Catatan Pribadi adalah aplikasi berbasis web yang dibuat menggunakan Re
 - Catatan yang diarsipkan akan dipindahkan ke daftar arsip terpisah dari daftar catatan biasa.
 - Pengguna dapat memindahkan catatan kembali dari arsip ke daftar utama.
 
-## Struktur Proyek
-Berikut struktur direktori proyek:
-
-```
-/src
-├── components
-│   ├── NoteList.js      // Komponen untuk menampilkan daftar catatan
-│   ├── NoteForm.js      // Komponen untuk form penambahan catatan
-│   ├── NoteItem.js      // Komponen untuk menampilkan item catatan
-│   └── SearchBar.js     // Komponen untuk fitur pencarian (opsional)
-├── App.js               // Komponen utama aplikasi
-├── index.js             // Entry point aplikasi
-└── data.js              // Data awal catatan
-```
-
 ## Cara Menjalankan Proyek
 1. **Clone repository ini**:
    ```bash
