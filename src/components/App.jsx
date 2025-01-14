@@ -86,7 +86,13 @@ class NoteApp extends React.Component {
                     </article>
                     <article className="note-app__body__archived">
                         <h2>Arsip Catatan</h2> 
-                        {archivedNotes.length === 0  ? <p className="note-list__empty-message">Tidak ada Catatan</p> : <NoteList notes={archivedNotes} onDelete={this.onDeleteHandler} onArchived={this.onArchivedHandler} />}
+                        {
+                            searchedNotes && searchedNotes > 0 ? (<NoteList notes={searchedNotes.filter((note => !note.archived))} onDelete={this.onDeleteHandler} onArchived={this.onArchivedHandler}/>) 
+                            : searchedNotes && searchedNotes === 0 ? (<p className="note-list__empty-message">Tidak ada Catatan</p>)
+                            : activeNotes.length === 0  ? (<p className="note-list__empty-message">Tidak ada Catatan</p>) 
+                            : (<NoteList notes={archivedNotes} onDelete={this.onDeleteHandler} onArchived={this.onArchivedHandler} />)
+                        }
+                        
                     </article>
                 </div>
             </div>
